@@ -1,0 +1,526 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 500px auto; /* Lebar tetap untuk teks, kolom auto untuk gambar */
+    align-items: center;
+    gap: 20px; /* Jarak antara teks dan gambar */
+}
+
+.text-content {
+    width: 400px; /* Lebar tetap untuk teks */
+    word-wrap: break-word; /* Membungkus kata panjang */
+}
+
+.text-content .btn {
+    background-color: #FFBF00ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Tambahkan transisi untuk efek hover */
+}
+
+.text-content .btn:hover {
+    background-color: #0056b3;
+}
+
+.slider-image {
+    width: 750px; /* Ubah ukuran sesuai kebutuhan */
+    height: auto;
+    justify-self: start; /* Posisi gambar tetap di kiri */
+    border-radius: 10px; /* Opsional: Membuat sudut gambar melengkung */
+}
+
+.slider-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.slider-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-slider .prev, .hero-slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.hero-slider .next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.hero-slider .prev {
+    left: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.hero-slider .prev:hover, .hero-slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Service Section */
+.services {
+    padding: 50px 20px 20px 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    width: 100%;
+    max-width: 23%;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    opacity: 0;  /* Set opacity to 0 for fade effect */
+    transform: translateY(20px); /* Initial translate */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.col.fade-in {
+    opacity: 1;  /* Fade in effect */
+    transform: translateY(0);  /* Reset translate */
+}
+
+.card {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555555;
+}
+
+.btn {
+    background-color: #FFBF00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Portfolio Section */
+.portfolio {
+    height: 600px; /* Tentukan tinggi untuk section ini */
+    overflow: hidden; /* Menghindari elemen keluar dari batas section */
+    position: relative;
+    background-color: #ffffff; /* Warna latar belakang jika diperlukan */
+    margin-top: -20px;
+}
+
+.portfolio .container {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+
+.portfolio h2 {
+    text-align: center; /* Membuat teks berada di tengah secara horizontal */
+    margin-bottom: 20px; /* Memberikan jarak antara h2 dan carousel */
+    font-size: 28px; /* Ukuran teks, dapat disesuaikan sesuai keinginan */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.carousel {
+    position: relative; /* Mengubah dari absolute ke relative agar tidak melayang di atas elemen lain */
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: none;
+    display: flex;
+}
+
+/* Gaya untuk setiap gambar carousel */
+.carousel__face:nth-child(1) {
+    background-image: url("caro1.jpg");
+    transform: rotateY(  0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+    background-image: url("caro2.jpg");
+    transform: rotateY( 40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+    background-image: url("caro3.jpg");
+    transform: rotateY( 80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+    background-image: url("caro4.jpeg");
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+    background-image: url("caro5.jpg");
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+    background-image: url("caro6.jpg");
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+    background-image: url("caro7.jpg");
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+    background-image: url("caro8.jpg");
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(9) {
+    background-image: url("caro9.jpeg");
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+/* Clients Section */
+
+.clients h2 {
+    text-align: center; /* Membuat teks berada di tengah secara horizontal */
+    margin-bottom: 40px; /* Memberikan jarak antara h2 dan carousel */
+    font-size: 28px; /* Ukuran teks, dapat disesuaikan sesuai keinginan */
+    font-weight: bold;
+}
+
+.slider {
+    background: #ffffff;
+    height: 75pt;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    user-select: none;
+    touch-action: none;
+}
+
+.slider .slide-track-1 {
+    animation: scroll-l 30s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+
+.slider .slide {
+    height: 75pt;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.slider .slide img {
+    width: 180px;
+    padding: 1pc;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes scroll-l {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes scroll-r {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-section .btn {
+    background-color: #FFBF00;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.footer-section .btn:hover {
+    background-color: #0056b3;
+}
+
+.footer-section .latest-articles a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section .latest-articles a:hover {
+    text-decoration: underline; /* Memberikan underline saat di-hover */
+}
+
+.footer-section .photo-stream img {
+    width: 30%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.footer-section .photo-stream img:last-child {
+    margin-right: 0;
+}
+
+.footer-section .contact-us address {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 10px 0;
+    color: #ccc;
+}
+
+.footer-section .contact-us a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section .contact-us a:visited {
+    color: #ffffff;
+}
+
+.footer-section .contact-us a:focus,
+.footer-section .contact-us a:hover,
+.footer-section .contact-us a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    margin: 0 5px;
+    color: #ccc;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+.footer-social-icons a:nth-child(1):hover {
+    color: #3b5998; /* Facebook */
+}
+
+.footer-social-icons a:nth-child(2):hover {
+    color: #1da1f2; /* Twitter */
+}
+
+.footer-social-icons a:nth-child(3):hover {
+    color: #e1306c; /* Instagram */
+}
+
+.footer-social-icons a:nth-child(4):hover {
+    color: #0077b5; /* LinkedIn */
+}
+
